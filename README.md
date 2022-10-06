@@ -12,5 +12,6 @@ the function have this signature InputAddComposer(), this function display this 
 in this step prepare a LazyColumn of tasks 
 add a compose ItemTask(task:Task)
 then ListTask(tasks:List<Task>)
+Test with a constant list of tasks that you define 
 ## Steps3
 insert ListTask in MainScreen that contain a scaffold
