@@ -3,15 +3,25 @@ iin this workshop we will do with states in compose
 the purpose is to prepare this screen <br>
 <img src="https://github.com/mouniraz/stateawithcoposer/blob/main/screentp1.png" height=400/>
 ## Steps1
-create a kotlin class Task having three attribute(label,id,checked)
+in the composable InputAddComposer
+replace 
+```kotlin
+var text by remember { mutableStateOf("") }
+```kotlin
+par
+```kotlin
+var text :String=""
+```kotlin
+what happen ? what does that mean this declaration? what is the type of the variable text?
 ## Steps2
-we will do the first Composer InputAddComposer who displays input  
-the function have this signature InputAddComposer(), this function display this <br/>
-<img src="https://github.com/mouniraz/stateawithcoposer/blob/main/input.png"/>
+Replace this declaration by this
+```kotlin
+  //var text by remember { mutableStateOf("") }
+    val textState = remember { mutableStateOf("") }
+
+    Column(modifier= Modifier.padding(8.dp)) {
+        OutlinedTextField(value = textState.value, onValueChange ={textState.value=it}, label = { Text("Task") },)
+        .........
+    ```kotlin
+check the difference betweeen this declaration and the previous way
 ## Steps3
-in this step prepare a LazyColumn of tasks 
-add a compose ItemTask(task:Task)
-then ListTask(tasks:List<Task>)
-Test with a constant list of tasks that you define 
-## Steps3
-insert ListTask in MainScreen that contain a scaffold
