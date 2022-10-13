@@ -7,13 +7,14 @@ in the composable InputAddComposer
 replace 
 ```kotlin
 var text by remember { mutableStateOf("") }
-```kotlin
+```
 par
 ```kotlin
 var text :String=""
-```kotlin
+```
 what happen ? what does that mean this declaration? what is the type of the variable text?
-## Steps2
+## Steps2 
+
 Replace this declaration by this
 ```kotlin
   //var text by remember { mutableStateOf("") }
@@ -22,6 +23,6 @@ Replace this declaration by this
     Column(modifier= Modifier.padding(8.dp)) {
         OutlinedTextField(value = textState.value, onValueChange ={textState.value=it}, label = { Text("Task") },)
         .........
-    ```kotlin
+ ```
 check the difference betweeen this declaration and the previous way
 ## Steps3
