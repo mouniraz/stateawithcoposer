@@ -26,3 +26,32 @@ Replace this declaration by this
  ```
 check the difference betweeen this declaration and the previous way
 ## Steps3
+tape a text in the textfield and change orientation what happen ?
+use this declaration and do the same operation
+```kotlin
+var text by rememberSaveable { mutableStateOf("") }
+```
+## Steps4
+in the same screen what does the var that must be declared as State ?
+
+## Steps5
+in this step we will change list<Task> as State 
+the difference between text and list that the list and the event that change the list are not in the same composable
+ for text the event onchangetext and var text are in the same composable
+  1.Declare a class called TasksViewModel qui herite de la classe ViewModel()
+  
+  ```kotlin
+  class TaskViewModel: ViewModel() {}
+  ```
+  2. in this class declare the state that manage the list of tasks
+  ```kotlin
+      var listTask = mutableStateListOf<Task>()
+  ```
+  3. in the same class add the method addtask as below
+    
+  ```kotlin
+  fun addTask(task:Task)
+    {
+        listTask.add(task)
+    }
+   ```
