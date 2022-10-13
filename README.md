@@ -55,3 +55,16 @@ the difference between text and list that the list and the event that change the
         listTask.add(task)
     }
    ```
+   4. pass this class as parameter in the composable that need to use the state or update the state 
+    ```kotlin
+      fun ListTasks(vm:TaskViewModel)
+      fun ItemTask(task:Task,vm:TaskViewModel)
+        
+    ```
+    change the rest of this classes to perform adding tasks and displaying them
+  5. instantiate a var vm in the main scaffold 
+      var vm:TaskViewModel= viewModel()
+  and pass it as parameter in your composables
+  6 add the method removeTask to your viewModel 
+  7. the same with checkTask 
+  
