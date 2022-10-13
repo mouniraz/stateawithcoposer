@@ -56,10 +56,12 @@ the difference between text and list that the list and the event that change the
     }
    ```
    4. pass this class as parameter in the composable that need to use the state or update the state 
-    ```kotlin
+    
+  ```kotlin
       fun ListTasks(vm:TaskViewModel)
       fun ItemTask(task:Task,vm:TaskViewModel)
-      ```
+  ```
+
   change the rest of this classes to perform adding tasks and displaying them
   5. instantiate a var vm in the main scaffold 
       var vm:TaskViewModel= viewModel()
