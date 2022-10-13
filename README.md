@@ -59,9 +59,8 @@ the difference between text and list that the list and the event that change the
     ```kotlin
       fun ListTasks(vm:TaskViewModel)
       fun ItemTask(task:Task,vm:TaskViewModel)
-        
-    ```
-    change the rest of this classes to perform adding tasks and displaying them
+      ```
+  change the rest of this classes to perform adding tasks and displaying them
   5. instantiate a var vm in the main scaffold 
       var vm:TaskViewModel= viewModel()
   and pass it as parameter in your composables
